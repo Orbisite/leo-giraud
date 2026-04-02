@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@source "../node_modules/@orbisite/blocks/src/**/*.{js,jsx}";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Outfit, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg, #fffdfb 0%, #ffffff 35%, #fff7ed 100%);
+  min-height: 100vh;
+  color: var(--p-content-heading, #1c1917);
+}
