@@ -83,6 +83,8 @@ export function buildPageConfig(content, locale = 'fr', onLocaleChange = () => {
         onLocaleChange,
         spaLinkComponent,
         logoHref,
+        logoOpenInNewTab: nav.logoOpenInNewTab,
+        ctaOpenInNewTab: nav.ctaOpenInNewTab,
       },
     }),
     hero: () => ({
@@ -106,6 +108,7 @@ export function buildPageConfig(content, locale = 'fr', onLocaleChange = () => {
         imageAlt: hero.imageAlt,
         overlapFloatingNavbar: true,
         spaLinkComponent,
+        ctaOpenInNewTab: hero.ctaOpenInNewTab,
       },
     }),
     logoCloud: () => ({
@@ -198,6 +201,8 @@ export function buildPageConfig(content, locale = 'fr', onLocaleChange = () => {
         color: 'primary',
         sectionPadding: 'default',
         spaLinkComponent,
+        ctaOpenInNewTab: ctaBanner.ctaOpenInNewTab,
+        secondaryCtaOpenInNewTab: ctaBanner.secondaryCtaOpenInNewTab,
       },
     }),
     footer: () => ({
@@ -211,6 +216,7 @@ export function buildPageConfig(content, locale = 'fr', onLocaleChange = () => {
             footer.links.map((l) => ({
               label: l.label,
               href: l.href ?? '#',
+              openInNewTab: l.openInNewTab,
             }))
           : [
               { label: footer.privacy, href: footer.linkHrefs?.privacy ?? '#' },
@@ -222,6 +228,7 @@ export function buildPageConfig(content, locale = 'fr', onLocaleChange = () => {
             footer.socials.map((s) => ({
               label: s.label,
               href: s.href ?? '#',
+              openInNewTab: s.openInNewTab,
             }))
           : [],
         color: 'neutral',
